@@ -1,0 +1,32 @@
+messages:
+  prefix: '&#e46b71&lAdminSounds &8»'
+  
+  success:
+    reload: '{prefix} &#00ff7f✔ &fConfiguration reloaded successfully!'
+    playing: '{prefix} &#00ff7f♪ &7Playing &e%sound% &d♪'
+    playing-all: '{prefix} &#00ff7f&l♫ &7Playing &f%sound% &7for &e%count% &7online players'
+  
+  errors:
+    no-permission: '&#ff4747✘ &cYou don''t have permission to do this!'
+    player-not-found: '{prefix} &#ff4747⚠ &cPlayer not found!'
+    sound-not-found: '{prefix} &#ff4747⚠ &cSound effect not found: &f%sound%'
+    invalid-sound: '{prefix} &#ff4747⚠ &cInvalid sound: &f%sound%'
+  
+  help:
+    header: '&#e46b71&lAdminSound Commands'
+    play: ' &#00bfff◆ &f/adminsounds play <player> <sound> &7- Play a sound effect'
+    list: ' &#00bfff◆ &f/adminsounds list &7- List available sound effects'
+    reload: ' &#00bfff◆ &f/adminsounds reload &7- Reload the configuration'
+    debug: ' &#00bfff◆ &f/adminsounds debug <sound> &7- Debug sound effect timing'
+    footer: '&f'
+  
+  list:
+    header: '&#e46b71Sound:'
+    entry: ' &#00bfff◆ &f%sound%'
+    hover: '&#00ff7f♪ &7Click to play &f%sound%'
+    footer: '&f'
+  
+  debug:
+    header: '&#4e5de6&l〘 &fSound timing for ''&b%sound%&f'' &#4e5de6&l〙'
+    entry: '&#00bfff⌚ &7%sound% at &f%delay_seconds%s &7(tick: &f%delay_ticks%&7)'
+    footer: '&f' 
