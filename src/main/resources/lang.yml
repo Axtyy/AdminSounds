@@ -21,7 +21,7 @@ messages:
     footer: '&f'
   
   list:
-    header: '&#e46b71Sound:'
+    header: '&#e46b71&lSound Effects:'
     entry: ' &#00bfff◆ &f%sound%'
     hover: '&#00ff7f♪ &7Click to play &f%sound%'
     footer: '&f'
