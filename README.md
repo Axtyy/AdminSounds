@@ -16,7 +16,7 @@ AdminSounds is a Bukkit/Spigot plugin that allows server administrators to play 
 - /adminsounds debug <sound>: Debug sound effect timing.
 
 **Configuration**:
-The plugin configuration is stored in the **config.yml** file in the plugins/AdminSounds directory. You can customize the plugin behavior by editing this file.
+The plugin configuration is stored in the **sounds.yml** file in the plugins/AdminSounds directory. You can customize the plugin behavior by editing this file.
 
 **Contributing**:
 If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/Axtyy/AdminSounds/issues). Pull requests are also welcome.
