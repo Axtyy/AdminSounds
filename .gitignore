@@ -1,3 +1,11 @@
+# Maven target directory
+target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
 # Compiled class file
 *.class
 

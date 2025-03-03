@@ -1,9 +1,7 @@
 package com.axteroid.model;
 
 import com.axteroid.AdminSound;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.List;
