@@ -21,7 +21,7 @@ sounds:
         pitch: 1.0
       - sound: BLOCK_ANVIL_LAND
         delay: 2
-        volume: 0.8
+        volume: 1.0
         pitch: 1.5
       - sound: BLOCK_NOTE_BLOCK_PLING
         delay: 4
@@ -58,11 +58,9 @@ sounds:
       - sound: ENTITY_LIGHTNING_BOLT_THUNDER
         delay: 6
         volume: 1.2
-<<<<<<< HEAD
-        pitch: 0.6
-  hacker_mode:
-=======
         pitch: 0.7
+  hacker_mode:
+    steps:
       - sound: ENTITY_WITHER_SPAWN
         delay: 15
         volume: 1.0
@@ -95,7 +93,6 @@ sounds:
         pitch: 1.0
   
   fail:
->>>>>>> 0febc7378fea1913fa973bd31a116ebf712baa7c
     steps:
       - sound: BLOCK_NOTE_BLOCK_BASS
         delay: 0
@@ -316,7 +313,7 @@ sounds:
       - sound: ENTITY_PLAYER_LEVELUP
         delay: 1
         volume: 0.7
-        pitch: 1.2 
+        pitch: 1.2
   robotic_beep:
     steps:
       - sound: BLOCK_NOTE_BLOCK_BELL
@@ -330,13 +327,12 @@ sounds:
       - sound: BLOCK_NOTE_BLOCK_CHIME
         delay: 5
         volume: 1.0
-        pitch: 2.
+        pitch: 2.0
   ghost_whisper:
     steps:
       - sound: ENTITY_PHANTOM_AMBIENT
         delay: 0
         volume: 0.7
-<<<<<<< HEAD
         pitch: 1.5
       - sound: ENTITY_ILLUSIONER_CAST_SPELL
         delay: 3
@@ -537,6 +533,22 @@ sounds:
         delay: 12
         volume: 1.0
         pitch: 1.8
-=======
-        pitch: 1.2 
->>>>>>> 0febc7378fea1913fa973bd31a116ebf712baa7c
+
+  kill_streak:
+    steps:
+      - sound: ENTITY_PLAYER_ATTACK_CRIT
+        delay: 0
+        volume: 1.2
+        pitch: 1.0
+      - sound: BLOCK_ANVIL_LAND
+        delay: 2
+        volume: 0.9
+        pitch: 1.2
+      - sound: ENTITY_ENDER_DRAGON_AMBIENT
+        delay: 4
+        volume: 1.2
+        pitch: 0.9
+      - sound: ENTITY_FIREWORK_ROCKET_BLAST
+        delay: 6
+        volume: 1.3
+        pitch: 1.0

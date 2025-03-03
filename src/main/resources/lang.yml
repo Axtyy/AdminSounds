@@ -12,7 +12,7 @@ messages:
   success:
     reload: '{prefix} &#00ff7f✔ &fConfiguration reloaded successfully!'
     playing: '{prefix} &#00ff7f♪ &7Playing &e%sound% &d♪'
-    playing-all: '{prefix} &#00ff7f&l♫ &7Playing &f%sound% &7for &e%count% &7online players'
+    playing_all: '{prefix} &#00ff7f♫ &7Playing &f%sound% &7for &e%count% &7online players'
   
   errors:
     no-permission: '&#ff4747✘ &cYou don''t have permission to do this!'
