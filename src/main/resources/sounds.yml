@@ -1,660 +1,152 @@
+# AdminSounds Plugin
+# Author: Axtyy
+# Version: 1.0
+
+
+# You can add your own sounds to the plugin by adding them to the sounds.yml file.
+# You can also add your own steps to the sounds by adding them to the sounds.yml file.
+# You can also add your own volume and pitch to the sounds by adding them to the sounds.yml file.
+
+# You can also easily give the AI context of the sounds.yml file and template
+# of how sounds work and easily generate a new sound effects
+
+
+# Sound effects for AdminSounds plugin
 sounds:
-  crystalbreak:
+  double_kill:
     steps:
-      - sound: BLOCK_GLASS_BREAK
+      - sound: ENTITY_PLAYER_ATTACK_CRIT
+        delay: 0
+        volume: 1.2
+        pitch: 1.0
+      - sound: BLOCK_ANVIL_LAND
+        delay: 2
+        volume: 0.8
+        pitch: 1.5
+      - sound: BLOCK_NOTE_BLOCK_PLING
+        delay: 4
+        volume: 1.0
+        pitch: 2.0
+  laser_shot:
+    steps:
+      - sound: ENTITY_FIREWORK_ROCKET_LAUNCH
+        delay: 0
+        volume: 1.2
+        pitch: 1.8
+      - sound: BLOCK_NOTE_BLOCK_PLING
+        delay: 2
+        volume: 1.0
+        pitch: 2.0
+      - sound: BLOCK_REDSTONE_TORCH_BURNOUT
+        delay: 3
+        volume: 0.8
+        pitch: 1.4
+  earthquake:
+    steps:
+      - sound: ENTITY_GENERIC_EXPLODE
         delay: 0
         volume: 1.5
-        pitch: 1.0
-      - sound: BLOCK_AMETHYST_BLOCK_BREAK
+        pitch: 0.5
+      - sound: BLOCK_STONE_BREAK
+        delay: 2
+        volume: 1.3
+        pitch: 0.7
+      - sound: ENTITY_WITHER_AMBIENT
         delay: 4
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_GLASS_BREAK
-        delay: 4
-        volume: 1.2
-        pitch: 0.9
-      - sound: BLOCK_AMETHYST_BLOCK_BREAK
-        delay: 4
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_GLASS_BREAK
-        delay: 4
-        volume: 1.0
-        pitch: 0.8
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 4
-        volume: 1.0
-        pitch: 1.2
-
-  epic_boss_fight:
-    steps:
-      - sound: ENTITY_ENDER_DRAGON_GROWL
-        delay: 0
         volume: 1.0
         pitch: 0.8
       - sound: ENTITY_LIGHTNING_BOLT_THUNDER
-        delay: 10
+        delay: 6
         volume: 1.2
-        pitch: 0.7
-      - sound: ENTITY_WITHER_SPAWN
-        delay: 15
-        volume: 1.0
-        pitch: 1.0
-
-  custom_magic:
-    steps:
-      - sound: custom:magic_spell
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-        namespace: "mypack"
-        key: "custom/magic_spell"
-
-  custom_epic:
-    steps:
-      - sound: nexo:epic_sound
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-
-  epic_theme:
-    steps:
-      - sound: custom:epic_theme
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-        namespace: "mypack"
-        key: "music/epic_theme"
-
-  levelup:
-    steps:
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-      - sound: BLOCK_NOTE_BLOCK_CHIME
-        delay: 5
-        volume: 1.0
-        pitch: 2.0
-  
-  victory:
-    steps:
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-      - sound: ENTITY_FIREWORK_ROCKET_BLAST
-        delay: 5
-        volume: 1.0
-        pitch: 1.0
-      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
-        delay: 10
-        volume: 1.0
-        pitch: 1.0
-  
-  fail:
+        pitch: 0.6
+  hacker_mode:
     steps:
       - sound: BLOCK_NOTE_BLOCK_BASS
         delay: 0
         volume: 1.0
         pitch: 0.5
-      - sound: ENTITY_VILLAGER_NO
-        delay: 5
+      - sound: ENTITY_ILLUSIONER_PREPARE_MIRROR
+        delay: 3
+        volume: 0.8
+        pitch: 1.3
+      - sound: BLOCK_BEACON_ACTIVATE
+        delay: 6
         volume: 1.0
-        pitch: 0.8
-  
-  custom_example:
-    steps:
-      - sound: custom:my_custom_sound
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-      
-  itemsadder_example:
-    steps:
-      - sound: itemsadder:special_sound
-        delay: 0
-        volume: 1.0
-        pitch: 1.0
-
-  happy_birthday:
-    steps:
-      # First line: "Happy Birthday to you"
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 0
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.122462  # G
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.189207  # A
-      
-      # Second line: "Happy Birthday to you"
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.122462  # G
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      
-      # Third line: "Happy Birthday dear [name]"
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 2.0  # High F
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.414214  # D
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.189207  # A
-      
-      # Final line: "Happy Birthday to you"
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.681793  # Eb
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.681793  # Eb
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.2
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 8
-        volume: 1.4
-        pitch: 1.0  # Final F 
-
-  tokyo_drift:
-    steps:
-      # Base beat intro
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Low F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 2
-        volume: 1.0
-        pitch: 1.0
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 2
-        volume: 1.4
-        pitch: 0.5  # Low F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 2
-        volume: 1.0
-        pitch: 1.0
-
-      # Main riff (I wonder if you know...)
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Bass F
-      
-      # (How they live in Tokyo)
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Bass F
-
-      # Fast drift pattern
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.3
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.3
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.3
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Bass F
-      
-      # (If you seen it then you mean it)
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Bass F
-
-      # (Then you know you have to go)
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.2
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.5  # Bass F
-
-      # Fast and Furious (Bridge)
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.4
-        pitch: 0.749  # Higher bass
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.3
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.3
-        pitch: 1.189207  # A
-      
-      # DRIFT DRIFT DRIFT
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.4
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 0
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.4
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 0
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 1
-        volume: 1.4
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 0
-        volume: 1.2
-        pitch: 1.0
-
-      # Final riff with emphasis
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.4
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.4
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 2
-        volume: 1.4
-        pitch: 1.0  # F
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.5
-        pitch: 0.5  # Final low F
-      - sound: BLOCK_NOTE_BLOCK_BASEDRUM
-        delay: 0
-        volume: 1.3
-        pitch: 0.7 
-
-  never_gonna:
-    steps:
-      # Iconic intro
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 0
-        volume: 1.2
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 4
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 4
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 4
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 4
-        volume: 1.2
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 4
-        volume: 1.2
-        pitch: 1.189207  # A
-
-      # Never gonna give you up
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.594603  # Low A
-
-      # Never gonna let you down
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.667420  # Low E
-
-      # Never gonna run around
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.887749  # E
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.749154  # Low G
-
-      # And desert you
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.594603  # Low A
-
-      # Never gonna make you cry
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.594603  # Low A
-
-      # Never gonna say goodbye
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.887749  # E
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.667420  # Low E
-
-      # Never gonna tell a lie
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.781797  # D#
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.681793  # D
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 4
-        volume: 1.3
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.749154  # Low G
-
-      # And hurt you
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.334840  # Bb
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 8
-        volume: 1.3
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.0
-        pitch: 0.594603  # Low A
-      
-      # Final chord
-      - sound: BLOCK_NOTE_BLOCK_GUITAR
-        delay: 0
-        volume: 1.4
-        pitch: 1.189207  # A
-      - sound: BLOCK_NOTE_BLOCK_BIT
-        delay: 0
-        volume: 1.2
-        pitch: 1.498307  # C
-      - sound: BLOCK_NOTE_BLOCK_BASS
-        delay: 0
-        volume: 1.2
-        pitch: 0.594603  # Low A 
-
-  boss_spawn:
-    steps:
-      - sound: ENTITY_WITHER_SPAWN
-        delay: 0
-        volume: 1.2
-        pitch: 0.7
-      - sound: ENTITY_LIGHTNING_BOLT_THUNDER
-        delay: 5
-        volume: 1.0
-        pitch: 0.8
-      - sound: BLOCK_END_PORTAL_SPAWN
-        delay: 10
-        volume: 1.3
-        pitch: 0.9
-      - sound: ENTITY_ENDER_DRAGON_GROWL
-        delay: 15
-        volume: 1.4
-        pitch: 0.7
-      - sound: ENTITY_WITHER_AMBIENT
-        delay: 20
-        volume: 1.2
-        pitch: 0.8
-
-  victory_royale:
-    steps:
+        pitch: 1.8
       - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.3
-        pitch: 1.2
-      - sound: ENTITY_FIREWORK_ROCKET_LARGE_BLAST
-        delay: 4
+        delay: 8
         volume: 1.2
-        pitch: 0.9
-      - sound: BLOCK_NOTE_BLOCK_CHIME
+        pitch: 1.5
+  speed_boost:
+    steps:
+      - sound: ENTITY_HORSE_GALLOP
         delay: 0
+        volume: 1.2
+        pitch: 1.2
+      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
+        delay: 2
+        volume: 1.0
+        pitch: 1.5
+      - sound: ENTITY_PLAYER_LEVELUP
+        delay: 4
         volume: 1.2
         pitch: 2.0
-      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
-        delay: 8
-        volume: 1.0
-        pitch: 1.1
-      - sound: BLOCK_NOTE_BLOCK_BELL
+  evil_laugh:
+    steps:
+      - sound: ENTITY_WITCH_AMBIENT
         delay: 0
-        volume: 1.3
-        pitch: 1.5
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 12
         volume: 1.0
+        pitch: 0.8
+      - sound: ENTITY_ILLUSIONER_MIRROR_MOVE
+        delay: 3
+        volume: 1.0
+        pitch: 1.2
+      - sound: ENTITY_ELDER_GUARDIAN_CURSE
+        delay: 6
+        volume: 1.2
+        pitch: 0.6
+  ninja_dash:
+    steps:
+      - sound: ENTITY_ENDERMAN_TELEPORT
+        delay: 0
+        volume: 1.2
         pitch: 1.5
-
+      - sound: BLOCK_NOTE_BLOCK_HAT
+        delay: 2
+        volume: 1.0
+        pitch: 1.8
+      - sound: ENTITY_PHANTOM_FLAP
+        delay: 4
+        volume: 0.9
+        pitch: 1.2
+  thunder_strike:
+    steps:
+      - sound: ENTITY_LIGHTNING_BOLT_THUNDER
+        delay: 0
+        volume: 1.5
+        pitch: 1.0
+      - sound: ENTITY_ENDER_DRAGON_GROWL
+        delay: 4
+        volume: 1.2
+        pitch: 0.8
+      - sound: BLOCK_ANVIL_LAND
+        delay: 6
+        volume: 1.0
+        pitch: 1.0
+  sci_fi_portal:
+    steps:
+      - sound: BLOCK_PORTAL_TRIGGER
+        delay: 0
+        volume: 1.0
+        pitch: 1.4
+      - sound: ENTITY_ILLUSIONER_CAST_SPELL
+        delay: 4
+        volume: 1.0
+        pitch: 1.8
+      - sound: BLOCK_BEACON_POWER_SELECT
+        delay: 6
+        volume: 0.8
+        pitch: 2.0
   bling:
     steps:
       - sound: BLOCK_NOTE_BLOCK_BELL
@@ -669,7 +161,6 @@ sounds:
         delay: 3
         volume: 1.1
         pitch: 1.7
-
   coins:
     steps:
       - sound: BLOCK_CHAIN_BREAK
@@ -684,11 +175,6 @@ sounds:
         delay: 3
         volume: 0.9
         pitch: 1.8
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 0.7
-        pitch: 1.6
-
   crate_roll:
     steps:
       - sound: BLOCK_NOTE_BLOCK_HAT
@@ -720,33 +206,9 @@ sounds:
         volume: 1.0
         pitch: 1.6
       - sound: ENTITY_EXPERIENCE_ORB_PICKUP
-        delay: 0
+        delay: 1
         volume: 1.0
         pitch: 1.0
-
-  epic_reward:
-    steps:
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_END_PORTAL_SPAWN
-        delay: 5
-        volume: 0.8
-        pitch: 1.5
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 0
-        volume: 1.3
-        pitch: 1.8
-      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
-        delay: 8
-        volume: 1.0
-        pitch: 1.2
-      - sound: BLOCK_NOTE_BLOCK_CHIME
-        delay: 0
-        volume: 1.2
-        pitch: 2.0
-
   error:
     steps:
       - sound: BLOCK_NOTE_BLOCK_BASS
@@ -761,133 +223,6 @@ sounds:
         delay: 2
         volume: 0.8
         pitch: 0.8
-
-  achievement:
-    steps:
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.0
-        pitch: 1.2
-      - sound: BLOCK_NOTE_BLOCK_CHIME
-        delay: 4
-        volume: 1.1
-        pitch: 1.8
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 2
-        volume: 1.0
-        pitch: 2.0
-      - sound: ENTITY_EXPERIENCE_ORB_PICKUP
-        delay: 4
-        volume: 0.8
-        pitch: 1.5
-
-  mystery_discover:
-    steps:
-      - sound: BLOCK_END_PORTAL_FRAME_FILL
-        delay: 0
-        volume: 1.0
-        pitch: 1.2
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 5
-        volume: 0.8
-        pitch: 1.5
-      - sound: BLOCK_NOTE_BLOCK_CHIME
-        delay: 3
-        volume: 0.9
-        pitch: 1.8
-      - sound: ENTITY_EXPERIENCE_ORB_PICKUP
-        delay: 4
-        volume: 0.7
-        pitch: 1.3
-
-  quest_complete:
-    steps:
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
-        volume: 1.2
-        pitch: 1.3
-      - sound: BLOCK_NOTE_BLOCK_CHIME
-        delay: 4
-        volume: 1.1
-        pitch: 2.0
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 2
-        volume: 1.0
-        pitch: 1.8
-      - sound: BLOCK_NOTE_BLOCK_BELL
-        delay: 4
-        volume: 1.2
-        pitch: 1.5
-      - sound: ENTITY_EXPERIENCE_ORB_PICKUP
-        delay: 2
-        volume: 1.0
-        pitch: 1.4
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 4
-        volume: 0.8
-        pitch: 1.5
-
-  sword_clash:
-    steps:
-      - sound: ITEM_SHIELD_BLOCK
-        delay: 0
-        volume: 1.2
-        pitch: 1.0
-      - sound: BLOCK_ANVIL_LAND
-        delay: 1
-        volume: 0.6
-        pitch: 2.0
-      - sound: ITEM_SHIELD_BLOCK
-        delay: 2
-        volume: 1.0
-        pitch: 1.2
-      - sound: ENTITY_PLAYER_ATTACK_SWEEP
-        delay: 0
-        volume: 1.1
-        pitch: 1.3
-
-  magic_cast:
-    steps:
-      - sound: ENTITY_ILLUSIONER_CAST_SPELL
-        delay: 0
-        volume: 1.2
-        pitch: 1.1
-      - sound: BLOCK_ENCHANTMENT_TABLE_USE
-        delay: 2
-        volume: 1.0
-        pitch: 1.5
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 4
-        volume: 0.8
-        pitch: 1.8
-      - sound: ENTITY_EVOKER_CAST_SPELL
-        delay: 6
-        volume: 0.9
-        pitch: 1.2
-
-  chest_legendary:
-    steps:
-      - sound: BLOCK_CHEST_OPEN
-        delay: 0
-        volume: 1.2
-        pitch: 0.8
-      - sound: ENTITY_PLAYER_LEVELUP
-        delay: 4
-        volume: 1.1
-        pitch: 1.2
-      - sound: BLOCK_END_PORTAL_SPAWN
-        delay: 2
-        volume: 0.7
-        pitch: 1.5
-      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
-        delay: 6
-        volume: 0.9
-        pitch: 1.1
-      - sound: BLOCK_AMETHYST_BLOCK_CHIME
-        delay: 8
-        volume: 1.2
-        pitch: 1.8
-
   teleport:
     steps:
       - sound: ENTITY_ENDERMAN_TELEPORT
@@ -906,26 +241,6 @@ sounds:
         delay: 6
         volume: 0.8
         pitch: 0.8
-
-  critical_hit:
-    steps:
-      - sound: ENTITY_PLAYER_ATTACK_CRIT
-        delay: 0
-        volume: 1.3
-        pitch: 1.0
-      - sound: BLOCK_ANVIL_LAND
-        delay: 1
-        volume: 0.5
-        pitch: 2.0
-      - sound: ENTITY_PLAYER_ATTACK_SWEEP
-        delay: 2
-        volume: 1.1
-        pitch: 1.4
-      - sound: BLOCK_NOTE_BLOCK_PLING
-        delay: 3
-        volume: 0.8
-        pitch: 2.0
-
   countdown:
     steps:
       - sound: BLOCK_NOTE_BLOCK_HAT
@@ -944,7 +259,6 @@ sounds:
         delay: 20
         volume: 1.2
         pitch: 1.5
-
   powerup:
     steps:
       - sound: BLOCK_NOTE_BLOCK_CHIME
@@ -964,6 +278,225 @@ sounds:
         volume: 1.0
         pitch: 1.6
       - sound: ENTITY_PLAYER_LEVELUP
-        delay: 0
+        delay: 1
         volume: 0.7
         pitch: 1.2 
+  robotic_beep:
+    steps:
+      - sound: BLOCK_NOTE_BLOCK_BELL
+        delay: 0
+        volume: 1.0
+        pitch: 2.0
+      - sound: BLOCK_NOTE_BLOCK_HAT
+        delay: 3
+        volume: 1.0
+        pitch: 1.5
+      - sound: BLOCK_NOTE_BLOCK_CHIME
+        delay: 5
+        volume: 1.0
+        pitch: 2.
+  ghost_whisper:
+    steps:
+      - sound: ENTITY_PHANTOM_AMBIENT
+        delay: 0
+        volume: 0.7
+        pitch: 1.5
+      - sound: ENTITY_ILLUSIONER_CAST_SPELL
+        delay: 3
+        volume: 0.6
+        pitch: 1.8
+      - sound: BLOCK_PORTAL_AMBIENT
+        delay: 6
+        volume: 0.5
+        pitch: 1.2
+  big_explosion:
+    steps:
+      - sound: ENTITY_GENERIC_EXPLODE
+        delay: 0
+        volume: 1.5
+        pitch: 1.0
+      - sound: ENTITY_LIGHTNING_BOLT_THUNDER
+        delay: 5
+        volume: 1.2
+        pitch: 0.8
+      - sound: BLOCK_ANVIL_LAND
+        delay: 6
+        volume: 1.3
+        pitch: 0.9
+  time_warp:
+    steps:
+      - sound: ENTITY_ENDERMAN_TELEPORT
+        delay: 0
+        volume: 1.0
+        pitch: 0.6
+      - sound: BLOCK_PORTAL_TRAVEL
+        delay: 4
+        volume: 1.2
+        pitch: 1.8
+      - sound: BLOCK_BEACON_POWER_SELECT
+        delay: 6
+        volume: 1.0
+        pitch: 1.5
+  stealth_kill:
+    steps:
+      - sound: ENTITY_PLAYER_ATTACK_CRIT
+        delay: 0
+        volume: 1.0
+        pitch: 0.8
+      - sound: ENTITY_ENDERMAN_TELEPORT
+        delay: 2
+        volume: 0.8
+        pitch: 1.5
+      - sound: BLOCK_NOTE_BLOCK_BASS
+        delay: 4
+        volume: 0.8
+        pitch: 0.5
+
+  big_currency_pickup:
+    steps:
+      - sound: BLOCK_AMETHYST_BLOCK_CHIME
+        delay: 0
+        volume: 1.2
+        pitch: 1.5
+      - sound: ENTITY_EXPERIENCE_ORB_PICKUP
+        delay: 2
+        volume: 1.0
+        pitch: 1.3
+      - sound: ENTITY_FIREWORK_ROCKET_TWINKLE
+        delay: 3
+        volume: 0.9
+        pitch: 1.6
+      - sound: BLOCK_NOTE_BLOCK_BELL
+        delay: 4
+        volume: 1.1
+        pitch: 1.8
+  currency_loss:
+    steps:
+      - sound: BLOCK_NOTE_BLOCK_BASS
+        delay: 0
+        volume: 1.0
+        pitch: 0.6
+      - sound: ENTITY_VILLAGER_NO
+        delay: 2
+        volume: 0.8
+        pitch: 0.8
+      - sound: BLOCK_GLASS_BREAK
+        delay: 4
+        volume: 0.7
+        pitch: 1.0
+
+  smooth_happy_birthday:
+    steps:
+      # First line: "Happy Birthday to you"
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 0
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.122462  # D
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.334840  # F
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.259921  # E
+      
+      # Second line: "Happy Birthday to you"
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.122462  # D
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.498307  # G
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.334840  # F
+      
+      # Third line: "Happy Birthday dear [name]"
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.0  # C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 2.0  # High C
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.414214  # A
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.334840  # F
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.259921  # E
+      
+      # Final line: "Happy Birthday to you"
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.681793  # B♭
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.681793  # B♭
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 4
+        volume: 1.0
+        pitch: 1.498307  # G
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.334840  # F
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.0
+        pitch: 1.259921  # E
+      - sound: BLOCK_NOTE_BLOCK_HARP
+        delay: 8
+        volume: 1.2
+        pitch: 1.0  # Final C
+
+      # Finishing touch with soft chimes
+      - sound: BLOCK_AMETHYST_BLOCK_CHIME
+        delay: 10
+        volume: 1.0
+        pitch: 1.5
+      - sound: BLOCK_NOTE_BLOCK_BELL
+        delay: 12
+        volume: 1.0
+        pitch: 1.8

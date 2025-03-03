@@ -1,3 +1,12 @@
+# Lang.yml for AdminSounds plugin
+# Author: Axtyy
+# Version: 1.0
+
+# This is the language file for the AdminSounds plugin.
+# You can easily change the language of the plugin by changing the values in this file.
+# You can also add your own messages to the plugin by adding them to the lang.yml file.
+
+
 messages:
   prefix: '&#e46b71&lAdminSounds &8»'
   
