@@ -38,12 +38,12 @@ permissions:
   adminsounds.debug:
     description: Allows using debug commands
     default: op
-    adminsounds.*:
-      description: Gives access to all AdminSounds commands
-      children:
-        adminsounds.use: true
-        adminsounds.reload: true
-        adminsounds.play: true
-        adminsounds.play.others: true
-        adminsounds.playall: true
-        adminsounds.debug: true
+  adminsounds.*:
+    description: Gives access to all AdminSounds commands
+    children:
+      adminsounds.use: true
+      adminsounds.reload: true
+      adminsounds.play: true
+      adminsounds.play.others: true
+      adminsounds.playall: true
+      adminsounds.debug: true

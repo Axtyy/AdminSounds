@@ -6,7 +6,6 @@
 # You can easily change the language of the plugin by changing the values in this file.
 # You can also add your own messages to the plugin by adding them to the lang.yml file.
 
-
 messages:
   prefix: '&#e46b71&lAdminSounds &8»'
   
@@ -24,6 +23,7 @@ messages:
   help:
     header: '&#e46b71&lAdminSound Commands'
     play: ' &#00bfff◆ &f/adminsounds play <player> <sound> &7- Play a sound effect'
+    playall: ' &#00bfff◆ &f/adminsounds playall <sound> &7- Play a sound effect for all online players'
     list: ' &#00bfff◆ &f/adminsounds list &7- List available sound effects'
     reload: ' &#00bfff◆ &f/adminsounds reload &7- Reload the configuration'
     debug: ' &#00bfff◆ &f/adminsounds debug <sound> &7- Debug sound effect timing'
